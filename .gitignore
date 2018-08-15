@@ -5,6 +5,7 @@ __pycache__/
 *.csv
 *.zip
 *.pkl
+*.sqlite
 
 # C extensions
 *.so

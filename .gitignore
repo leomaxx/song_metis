@@ -7,6 +7,10 @@ __pycache__/
 *.pkl
 *.sqlite
 *.bin
+*.png
+*.jpeg
+*.gif
+
 
 # C extensions
 *.so

@@ -10,11 +10,11 @@ Build a tool that assists Social Media Customer Service agent with 2 features:
   2. Categorize customer enqueries (to get ready to be imported to corresponding category in knowldge base)
 
 ### Dataset:
-https://www.kaggle.com/thoughtvector/customer-support-on-twitter
+https://www.kaggle.com/thoughtvector/customer-support-on-twitter <br>
 2.8 Million tweets between customers and customer service agents from different brands
 
 ### Implementation
-**Stage 1 - Data preprocessing ** <b>
+**Stage 1 - Data preprocessing** <br>
 1. Extract the emoji's from tweets, and put emoji's and text into two separate columns
 2. Preprocess the text including 
     * convert all text to lower case

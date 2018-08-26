@@ -14,7 +14,7 @@ https://www.kaggle.com/thoughtvector/customer-support-on-twitter
 2.8 Million tweets between customers and customer service agents from different brands
 
 ### Implementation
-** Stage 1 - Data preprocessing **
+**Stage 1 - Data preprocessing ** <b>
 1. Extract the emoji's from tweets, and put emoji's and text into two separate columns
 2. Preprocess the text including 
     * convert all text to lower case
@@ -24,12 +24,12 @@ https://www.kaggle.com/thoughtvector/customer-support-on-twitter
     * convert the dates into proper timestamps
 3. Remove the non-English tweets
  
- ** Stage 2 - Sentiment analysis on tweets **
+ **Stage 2 - Sentiment analysis on tweets**<b>
  Purpose of this stage is to analyze the sentiment of customer's last tweet in a conversation. As we would like to only recommend replys (solutions) from resolved conversations, we would like to leverage sentiment analysis to classify conversations that ended with good note as resolved.
  1. http://kt.ijs.si/data/Emoji_sentiment_ranking/ is used to score the sentiment of emoji's in the tweets
  2. User NTLK Vader sentimentanalyzer to score the text sentiment
  
- ** Stage 3 - Reconstruct conversations **
+ ** Stage 3 - Reconstruct conversations **<b>
  Group the tweets into conversations
  1. Merge the tweets into conversations with tweet id, tweet in response to, and responding tweets fields
  2. Tweets with time difference longer than 2 days are sparated into different conversations. This is a simple logic to identify different cases opened by same customer

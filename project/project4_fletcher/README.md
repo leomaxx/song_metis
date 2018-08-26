@@ -24,19 +24,19 @@ https://www.kaggle.com/thoughtvector/customer-support-on-twitter
     * convert the dates into proper timestamps
 3. Remove the non-English tweets
  
- **Stage 2 - Sentiment analysis on tweets**<b>
+ **Stage 2 - Sentiment analysis on tweets** <br>
  Purpose of this stage is to analyze the sentiment of customer's last tweet in a conversation. As we would like to only recommend replys (solutions) from resolved conversations, we would like to leverage sentiment analysis to classify conversations that ended with good note as resolved.
  1. http://kt.ijs.si/data/Emoji_sentiment_ranking/ is used to score the sentiment of emoji's in the tweets
  2. User NTLK Vader sentimentanalyzer to score the text sentiment
  
- ** Stage 3 - Reconstruct conversations **<b>
+ **Stage 3 - Reconstruct conversations** <br>
  Group the tweets into conversations
  1. Merge the tweets into conversations with tweet id, tweet in response to, and responding tweets fields
  2. Tweets with time difference longer than 2 days are sparated into different conversations. This is a simple logic to identify different cases opened by same customer
  3. Identify customer id and brand service agent id for each conversation
  4. Remove conversations that contains only tweets from customer or tweets from customer service agents
     
- ** Stage 4 - Build recommendation engines **
+ **Stage 4 - Build recommendation engines** <br>
  Idea behind the recommendation engine is simple - the assistant tool analyzes each new tweet and identifies the most similar tweets that are already resolved, and displays the corresponding history replies.
  1. Tokenize and lemanize the tweets
  2. Vectorize the tweets with different options:
@@ -50,7 +50,7 @@ https://www.kaggle.com/thoughtvector/customer-support-on-twitter
  6. Experiment with the above options and examine the quality of recommendations manually.
  The final best model is Count Vectorizer + NMF + 10 Topics.
  
-  ** Stage 5 - Clustering **
+  **Stage 5 - Clustering** <br>
  To categorize the customer requests into subgroups, in anticipation of future import to companys' knowledge base.
  Experiment with different options in the clustering pipeline:
  1. Vectorizes:
